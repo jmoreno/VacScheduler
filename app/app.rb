@@ -8,6 +8,14 @@ module VacScheduler
 
     enable :sessions
 
+    get "/" do
+        Country.all.to_json(:include => { :calendars => {:include => { :events => {
+            :only => [:notes, :vaccine_id, :age_id]}},
+            :only => [:id, :name] }}, 
+            :only => [:id, :name])
+
+    end
+
     ##
     # Caching support.
     #
