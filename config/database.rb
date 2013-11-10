@@ -19,9 +19,15 @@ ActiveRecord::Base.configurations[:development] = {
 
 }
 
+postgres = URI.parse(ENV['DATABASE_URL'] || '')
+
 ActiveRecord::Base.configurations[:production] = {
-  :adapter => 'sqlite3',
-  :database => Padrino.root('db', 'vac_scheduler_production.db')
+	:adapter  => 'postgresql',
+	:encoding => 'utf8',
+	:database => postgres.path[1..-1], 
+	:username => postgres.user,
+	:password => postgres.password,
+	:host     => postgres.host
 
 }
 

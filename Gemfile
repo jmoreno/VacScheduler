@@ -18,7 +18,16 @@ gem 'bcrypt-ruby', :require => 'bcrypt'
 gem 'sass'
 gem 'haml'
 gem 'activerecord', '>= 3.1', :require => 'active_record'
-gem 'sqlite3'
+
+# Desarrollo
+group :development do
+  gem 'sqlite3'
+end
+
+# Heroku
+group :production do
+ gem 'pg'
+end
 
 # Test requirements
 gem 'shoulda', :group => 'test'
