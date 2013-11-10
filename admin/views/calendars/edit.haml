@@ -1,0 +1,8 @@
+%ul.nav.nav-tabs
+  %li=link_to tag_icon(:list, pat(:list)), url(:calendars, :index)
+  %li=link_to tag_icon(:plus, pat(:new)), url(:calendars, :new)
+  %li.active=link_to tag_icon(:edit, pat(:edit)), url(:calendars, :edit, :id => @calendar.id)
+
+.tabs-content
+  -form_for :calendar, url(:calendars, :update, :id => @calendar.id), :method => :put, :class => 'form-horizontal' do |f|
+    =partial 'calendars/form', :locals => { :f => f }

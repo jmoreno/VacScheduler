@@ -1,0 +1,31 @@
+- error = @event.errors.include?(:notes)
+%fieldset.control-group{:class => error ? 'has-error' : ''}
+  =f.label :notes, :class => 'control-label'
+  .controls
+    ~f.text_area :notes, :class => 'form-control input-large input-with-feedback', :autofocus => true
+    %span.help-inline=error ? f.error_message_on(:notes, :class => 'text-error') : pat(:example)
+- error = @event.errors.include?(:calendar_id)
+%fieldset.control-group{:class => error ? 'has-error' : ''}
+  =f.label :calendar_id, :class => 'control-label'
+  .controls
+    =f.select :calendar_id, :collection => Calendar.all, :fields => [:name, :id], :class => 'form-control' 
+    %span.help-inline=error ? f.error_message_on(:calendar_id, :class => 'text-error') : pat(:example)
+- error = @event.errors.include?(:age_id)
+%fieldset.control-group{:class => error ? 'has-error' : ''}
+  =f.label :age_id, :class => 'control-label'
+  .controls
+    =f.select :age_id, :collection => Age.all, :fields => [:name, :id], :class => 'form-control'
+    %span.help-inline=error ? f.error_message_on(:age_id, :class => 'text-error') : pat(:example)
+- error = @event.errors.include?(:vaccine_id)
+%fieldset.control-group{:class => error ? 'has-error' : ''}
+  =f.label :vaccine_id, :class => 'control-label'
+  .controls
+    =f.select :vaccine_id, :collection => Vaccine.all, :fields => [:name, :id], :class => 'form-control'
+    %span.help-inline=error ? f.error_message_on(:vaccine_id, :class => 'text-error') : pat(:example)
+
+.form-actions
+  =f.submit pat(:save), :class => 'btn btn-primary'
+  &nbsp;
+  =f.submit pat(:save_and_continue), :class => 'btn btn-info', :name => 'save_and_continue'
+  &nbsp;
+  =link_to pat(:cancel), url(:events, :index), :class => 'btn btn-default'

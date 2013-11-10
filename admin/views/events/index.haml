@@ -1,0 +1,60 @@
+%ul.nav.nav-tabs
+  %li.active=link_to tag_icon(:list, pat(:list)), url(:events, :index)
+  %li=link_to tag_icon(:plus, pat(:new)), url(:events, :new)
+
+.tabs-content
+  %table#list.table.table-striped.table-hover.table-condensed
+    %thead
+      %tr
+        %th.header.list-menu
+          .dropdown
+            %a.list-menu-toggle.dropdown-toggle{:href => '#', :'data-toggle' => :dropdown}
+              =tag_icon :magic
+              %span.caret
+            %ul.list-menu.dropdown-menu{:role => :menu}
+              %li.list-menu-wrapper=link_to tag_icon(:check, pat(:select_all)), '#', :id => 'select-all', :class => 'list-menu-link'
+              %li.list-menu-wrapper.list-menu-wrapper-disabled
+                =link_to tag_icon(:'check-empty', pat(:deselect_all)), '#', :id => 'deselect-all', :class => 'list-menu-link list-menu-link-disabled'
+              %li.list-menu-divider.divider
+              %li.list-menu-wrapper.list-menu-wrapper-disabled
+                =link_to tag_icon(:trash, pat(:delete_selected)), '#', :id => 'delete-selected', :class => 'list-menu-link list-menu-link-disabled'
+                .list-menu-popover-delete-selected.popover.right
+                  .arrow
+                  %h3.popover-title=pat(:delete_selected_title)
+                  .popover-content
+                    -form_tag url(:events, :destroy_many), :method => :delete do
+                      =hidden_field_tag :event_ids, :'data-delete-many-ids' => true
+                      =submit_tag pat(:delete), :class =>'list-menu-popover-delete-selected-btn btn btn-danger btn-small'
+                      .btn.btn-default.btn-small.cancel=pat(:cancel)
+        %th.header= mat(:event, :id)
+        %th.header= mat(:event, :notes)
+        %th.header= mat(:event, :calendar_id)
+        %th.header= mat(:event, :age_id)
+        %th.header= mat(:event, :vaccine_id)
+        %th.header= mat(:event, :created_at)
+        %th.header= mat(:event, :updated_at)
+        %th.header.list-row-action-header
+
+    %tbody
+      -@events.each do |event|
+        %tr.list-row
+          %td.list-column.list-selectable
+            =check_box_tag 'event_ids[]', :value => event.id, :class => 'list-selectable-checkbox'
+          %td.list-column=event.id
+          %td.list-column=event.notes
+          %td.list-column=event.calendar.name
+          %td.list-column=event.age.name
+          %td.list-column=event.vaccine.name
+          %td.list-column=time_ago_in_words event.created_at
+          %td.list-column=time_ago_in_words event.updated_at
+          %td.list-column.list-row-action
+            .list-row-action-wrapper
+              =link_to tag_icon(:edit), :href => url(:events, :edit, :id => event.id), :rel => :tooltip, :title => "#{pat(:edit)} event", :class => 'list-row-action-wrapper-link'
+              =link_to tag_icon(:trash), :rel => :tooltip, :title => "#{pat(:delete)} event", :class => 'list-row-action-delete-one list-row-action-wrapper-link'
+              .popover.list-row-action-popover-delete-one.left
+                .arrow
+                %h3.popover-title=pat(:delete, :model => "event")
+                .popover-content
+                  -form_tag url(:events, :destroy, :id => event.id), :method => :delete do
+                    =submit_tag pat(:delete), :class =>'list-row-action-popover-delete-one-btn btn btn-danger btn-small'
+                    .btn.btn-default.btn-small.cancel=pat(:cancel)

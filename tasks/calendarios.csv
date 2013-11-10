@@ -1,0 +1,95 @@
+Andalucía;ene-12;HB;-;HB;DTPa;HB;SRP;DTPa;-;-;SRP;-;Tdpa;-;-;Var*;-;Td;-
+;;;;DTPa;Hib;DTPa;;Hib;;;;;;;;;;3 VPH;
+;;;;Hib;VPI;Hib;;VPI;;;;;;;;;;;
+;;;;VPI;MenC;VPI;;MenC;;;;;;;;;;;
+;;;;MenC;;;;;;;;;;;;;;;
+Aragón;nov-11;HB;-;HB;DTPa;HB;SRP;MenC;DTPa;-;-;-;Tdpa;;2;-;-;Td;-
+;;;;DTPa;Hib;DTPa;;;Hib;;;;SRP;;Var*;;;3 VPH;
+;;;;Hib;VPI;Hib;;;VPI;;;;;;;;;;
+;;;;VPI;MenC;VPI;;;;;;;;;;;;;
+;;;;MenC;;;;;;;;;;;;;;;
+Asturias;ene-09;HB;HB;DTPa;DTPa;HB;-;MenC;DTPa;-;SRP;-;DTPa;2;-;-;3 HB;MenCTd;-
+;;;;Hib;Hib;DTPa;;SRP;Hib;;;;;Var*;;;3 VPH;;
+;;;;VPI;VPI;Hib;;;VPI;;;;;;;;;;
+;;;;MenC;MenC;VPI;;;;;;;;;;;;;
+Baleares;jun-12;-;-;HB;HB;HB;SRP;-;DTPa;-;-;-;DTPa;-;3 HB;-;-;Td;-
+;;;;DTPa;DTPa;DTPa;;;Hib;;;;SRP;;Var*;;;3 VPH;
+;;;;Hib;Hib;Hib;;;VPI;;;;;;;;;;
+;;;;VPI;VPI;VPI;;;MenC;;;;;;;;;;
+;;;;MenC;;MenC;;;;;;;;;;;;;
+Canarias;jul-11;-;-;HB;HB;HB;SRP;-;DTPa;-;SRP;-;Tdpa;-;3 HB;-;2;Td;-
+;;;;DTPa;DTPa;DTPa;;;Hib;;;;;;;;Var*;3 VPH;
+;;;;Hib;Hib;Hib;;;VPI;;;;;;;;;;
+;;;;VPI;VPI;VPI;;;MenC;;;;;;;;;;
+;;;;MenC;MenC;;;;;;;;;;;;;;
+Cantabria;mar-12;HB;-;;DTPa;HB;;-;DTPa;-;-;-;Tdpa;-;Var*;-;-;Td;-
+;;;;HB;Hib;DTPa;MenC;;Hib;;;;SRP;;;;;3 VPH;
+;;;;DTPa;VPI;Hib;SRP;;VPI;;;;;;;;;;
+;;;;Hib;MenC;VPI;;;;;;;;;;;;;
+;;;;VPI;;;;;;;;;;;;;;;
+;;;;MenC;;;;;;;;;;;;;;;
+Castilla y León;feb-13;HB;-;HB;DTPa;HB;SRP;-;DTPa;-;SRP;-;Tdpa;-;2;-;-;Td;-
+;;;;DTPa;Hib;DTPa;;;Hib;;;;;;Var*;;;3 VPH;
+;;;;Hib;VPI;Hib;;;VPI;;;;;;;;;;
+;;;;VPI;MenC;VPI;;;MenC;;;;;;;;;;
+;;;;MenC;;;;;;;;;;;;;;;
+Castilla-La Mancha;ago-12;HB;HB;DTPa;DTPa;HB;SRP;-;DTPa;-;-;-;DTPa;-;2;-;-;3 HBTd;-
+;;;;Hib;Hib;DTPa;;;Hib;;;;SRP;;Var*;;;3 VPH;
+;;;;VPI;VPI;Hib;;;VPI;;;;;;;;;;
+;;;;MenC;MenC;VPI;;;MenC;;;;;;;;;;
+Cataluña;nov-11;-;-;HB;HB;HB;SRP;MenC;DTPa;-;-;Tdpa;;-;-;3 VPH;-;Td;
+;;;;DTPa;DTPa;DTPa;;;Hib;;;  SRP;;;;3;;;
+;;;;Hib;Hib;Hib;;;VPI;;;;;;;HA+HB;;;
+;;;;VPI;VPI;VPI;;;;;;;;;;2 Var*;;;
+;;;;MenC;;MenC;;;;;;;;;;;;;
+C. A. de Ceuta;jun-11;-;-;HB;HB;HB;SRP;HA;DTPa;HA;SRP;-;Tdpa;2 Var*;-;-;3;Tdpa;-
+;;;;DTPa;DTPa;DTPa;;;Hib;Var;;;;;;;HA+HB;;
+;;;;Hib;Hib;Hib;;;VPI;;;;;;;;3 VPH;;
+;;;;VPI;VPI;VPI;;;MenC;;;;;;;;;;
+;;;;MenC;MenC;;;;Var;;;;;;;;;;
+C. A. de Melilla;ene-11;-;-;HB;HB;HB;SRP;MenC;DTPa;Var;-;SRP;Tdpa;2;-;-;3;Tdpa;-
+;;;;DTPa;DTPa;DTPa;HA;Var;Hib;;;;;Var*;;;HA+HB;3 VPH;
+;;;;Hib;Hib;Hib;;;VPI;;;;;;;;;;
+;;;;VPI;VPI;VPI;;;HA;;;;;;;;;;
+;;;;MenC;MenC;;;;;;;;;;;;;;
+Comunidad Valenciana;nov-11;HB;-;HB;DTPa;HB;SRP;-;DTPa;-;-;-;Tdpa;-;2 Var*;-;-;Td;-
+;;;;DTPa;Hib;DTPa;;;Hib;;;;SRP;;;;; 3 VPH;
+;;;;Hib;VPI;Hib;;;VPI;;;;;;;;;;
+;;;;VPI;;VPI;;;MenC;;;;;;;;;;
+;;;;MenC;;MenC;;;;;;;;;;;;;
+Extremadura;mar-13;HB;-;HB;DTPa;HB;SRP;;DTPa;-;-;SRP;;2 Var*;-;-;-;Td;-
+;;;;DTPa;Hib;DTPa;;MenC;Hib;;;;DTPa;;;;;3 VPH;
+;;;;Hib;VPI;Hib;;;VPI;;;;;;;;;;
+;;;;VPI;MenC;VPI;;;;;;;;;;;;;
+;;;;MenC;;;;;;;;;;;;;;;
+Galicia;ene-11;HB;-;HB;DTPa;HB;VNC;SRP;DTPa;-;SRP;;Tdpa;-;-;2 Var*;-;Td;-
+;;;;DTPa;Hib;DTPa;;;Hib;;;;;;;;;3 VPH;
+;;;;Hib;VPI;Hib;;;VPI;;;;;;;;;;
+;;;;VPI;MenC;VPI;;;MenC;;;;;;;;;;
+;;;;MenC;VNC;;;;;;;;;;;;;;
+;;;;VNC;;;;;;;;;;;;;;;
+Madrid;jul-12;HB;-;HB;HB;HB;SRP;MenC;DTPa;-;-;Tdpa;-;-;Var*;-;-;Tdpa;-
+;;;;DTPa;DTPa;DTPa;;Var;Hib;;;SRP;;;;;;3 VPH;
+;;;;Hib;Hib;Hib;;;VPI;;;;;;;;;;
+;;;;VPI;VPI;VPI;;;;;;;;;;;;;
+;;;;MenC;MenC;;;;;;;;;;;;;;
+Murcia;ene-13;-;-;HB;HB;HB;MenC;-;DTPa;-;-;SRP;Tdpa;-;MenC;-;-;Td;-
+;;;;DTPa;DTPa;DTPa;SRP;;Hib;;;;;;2;;;3 VPH;
+;;;;Hib;Hib;Hib;;;VPI;;;;;;Var*;;;;
+;;;;VPI;VPI;VPI;;;;;;;;;3 VPH;;;;
+;;;;MenC;MenC;;;;;;;;;;;;;;
+Navarra;may-11;-;-;HB;HB;HB;-;MenC;DTPa;-;SRP;-;Tdpa;2;-;-;3 VPH;Td;-
+;;;;DTPa;DTPa;DTPa;;SRP;Hib;;Var;;;Var*;;;;;
+;;;;Hib;Hib;Hib;;Var;VPI;;;;;;;;;;
+;;;;VPI;VPI;VPI;;;;;;;;;;;;;
+;;;;MenC;MenC;;;;;;;;;;;;;;
+La Rioja;abr-13;-;-;HB;HB;HB;MenC;-;DTPa;-;SRP;-;Tdpa;-;3 VPH;-;Td;;-
+;;;;DTPa;DTPa;DTPa;SRP;;Hib;;;;;;;;2Var*;;
+;;;;Hib;Hib;Hib;;;VPI;;;;;;;;;;
+;;;;VPI;VPI;VPI;;;;;;;;;;;;;
+;;;;MenC;MenC;;;;;;;;;;;;;;
+País Vasco;abr-13;-;-;HB;HB;HB;MenC;-;DTPa;-;-;SRP;Tdpa;Var*;-;-;3 VPH;-;Td
+;;;;DTPa;DTPa;DTPa;SRP;;Hib;;;;;;;;;;
+;;;;Hib;Hib;Hib;;;VPI;;;;;;;;;;
+;;;;VPI;VPI;VPI;;;;;;;;;;;;;
+;;;;MenC;MenC;;;;;;;;;;;;;;
