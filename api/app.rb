@@ -1,7 +1,5 @@
 module VacScheduler
-  class App < Padrino::Application
-    register SassInitializer
-    use ActiveRecord::ConnectionAdapters::ConnectionManagement
+  class Api < Padrino::Application
     register Padrino::Rendering
     register Padrino::Mailer
     register Padrino::Helpers
@@ -9,7 +7,15 @@ module VacScheduler
     enable :sessions
 
     get "/" do
-        render :haml, "%p This is a sample blog created to demonstrate how Padrino works!"
+        Country.all.to_json(:include => { :calendars => {
+                                :include => { :events => {
+                                    :include => [
+                                        { :vaccine => { :only => [:short_name, :name, :description, :link_info]}}, 
+                                        { :age => { :only => [:months, :name, :short_name]}}],
+                                    :only => :notes}},
+                                :only => [:id, :name] }}, 
+                            :only => [:id, :name])
+
     end
 
     ##
