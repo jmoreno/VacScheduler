@@ -9,7 +9,7 @@ module VacScheduler
     enable :sessions
 
     get "/" do
-        render :haml, "%p This is a sample blog created to demonstrate how Padrino works!"
+        erb :vaccine_search_view
     end
 
     ##

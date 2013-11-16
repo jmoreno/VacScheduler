@@ -3,7 +3,7 @@
 :test: shoulda
 :mock: none
 :script: jquery
-:renderer: haml
+:renderer: erb
 :stylesheet: sass
 :namespace: VacScheduler
 :migration_format: number
