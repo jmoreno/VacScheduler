@@ -9,7 +9,7 @@ module VacScheduler
     enable :sessions
 
     get "/" do
-        erb :vaccine_search_view
+        render '/search/search'
     end
 
     ##

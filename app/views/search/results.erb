@@ -1,0 +1,27 @@
+<div class='page-header'>
+	<h1>Results</h1>
+</div>
+<div class="table-responsive">
+  <table class="table">
+  	<thead>
+  		<tr>
+  			<th>Calendar</th>
+  			<th>Age</th>
+  			<th>Vaccine (shortname)</th>
+  			<th>Vaccine (name)</th>
+  			<th>Notes</th>
+  		</tr>
+  	</thead>
+  	<tbody>
+	    <% @events.each do |event| %>
+		    <tr>
+		       <td><%= event.calendar.name %></td>
+		       <td><%= event.age.name %></td>
+		       <td><%= event.vaccine.short_name %></td>
+		       <td><%= event.vaccine.name %></td>
+		       <td><%= event.notes %></td>
+		    </td>
+	    <% end %>
+  	</tbody>
+  </table>
+</div>
