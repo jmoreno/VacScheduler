@@ -14,6 +14,7 @@ source 'https://rubygems.org'
 gem 'rake'
 
 # Component requirements
+gem 'rack-google-analytics', :require => 'rack/google-analytics'
 gem 'bcrypt-ruby', :require => 'bcrypt'
 gem 'sass'
 gem 'haml'

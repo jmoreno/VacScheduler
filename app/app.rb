@@ -1,5 +1,6 @@
 module VacScheduler
   class App < Padrino::Application
+    register AnalyticsInitializer
     register SassInitializer
     use ActiveRecord::ConnectionAdapters::ConnectionManagement
     register Padrino::Rendering
