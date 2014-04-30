@@ -33,7 +33,8 @@ Padrino.configure_apps do
 end
 
 # Mounts the core application for this project
-Padrino.mount('VacScheduler::App', :app_file => Padrino.root('app/app.rb')).to('/')
-
-Padrino.mount("VacScheduler::Admin", :app_file => File.expand_path('../../admin/app.rb', __FILE__)).to("/admin")
+Padrino.mount("VacScheduler::Admin", :app_file => Padrino.root('admin/app.rb')).to("/admin")
 Padrino.mount('VacScheduler::Api', :app_file => Padrino.root('api/app.rb')).to('/api')
+Padrino.mount('VacScheduler::Vacscheduler', :app_file => Padrino.root('vacscheduler/app.rb')).to('/vacscheduler')
+Padrino.mount('VacScheduler::Growthchart', :app_file => Padrino.root('growthchart/app.rb')).to('/growthchart')
+Padrino.mount('VacScheduler::App', :app_file => Padrino.root('app/app.rb')).to('/')

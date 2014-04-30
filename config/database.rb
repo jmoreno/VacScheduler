@@ -13,13 +13,15 @@
 #     :socket    => '/tmp/mysql.sock'
 #   }
 #
+postgres = URI.parse(ENV['DATABASE_URL'] || '')
+
 ActiveRecord::Base.configurations[:development] = {
-  :adapter => 'sqlite3',
-  :database => Padrino.root('db', 'vac_scheduler_development.db')
+	:adapter  => 'postgresql',
+	:encoding => 'utf8',
+	:database => 'vac_scheduler_development',
+	:host     => 'localhost'
 
 }
-
-postgres = URI.parse(ENV['DATABASE_URL'] || '')
 
 ActiveRecord::Base.configurations[:production] = {
 	:adapter  => 'postgresql',
@@ -32,20 +34,24 @@ ActiveRecord::Base.configurations[:production] = {
 }
 
 ActiveRecord::Base.configurations[:test] = {
-  :adapter => 'sqlite3',
-  :database => Padrino.root('db', 'vac_scheduler_test.db')
+	:adapter  => 'postgresql',
+	:encoding => 'utf8',
+	:database => 'vac_scheduler_test', 
+	:host     => 'localhost'
 
 }
 
 # Setup our logger
 ActiveRecord::Base.logger = logger
 
-# Raise exception on mass assignment protection for Active Record models.
-ActiveRecord::Base.mass_assignment_sanitizer = :strict
-
-# Log the query plan for queries taking more than this (works
-# with SQLite, MySQL, and PostgreSQL).
-ActiveRecord::Base.auto_explain_threshold_in_seconds = 0.5
+if ActiveRecord::VERSION::MAJOR.to_i < 4
+  # Raise exception on mass assignment protection for Active Record models.
+  ActiveRecord::Base.mass_assignment_sanitizer = :strict
+  
+  # Log the query plan for queries taking more than this (works
+  # with SQLite, MySQL, and PostgreSQL).
+  ActiveRecord::Base.auto_explain_threshold_in_seconds = 0.5
+end
 
 # Include Active Record class name as root for JSON serialized output.
 ActiveRecord::Base.include_root_in_json = false

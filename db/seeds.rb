@@ -6,7 +6,7 @@
 #   shell.say name
 #
 email     = "admin@vacsheduler.com"
-password  = "admin"
+password  = "vacscheduler"
 
 shell.say ""
 

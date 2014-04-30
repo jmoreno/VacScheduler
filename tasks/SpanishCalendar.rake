@@ -9,14 +9,14 @@ namespace :SpanishCalendar do
 		Calendar.delete_all
 		Event.delete_all
 
-		$country = Country.find_or_create_by_name("Spain")
+		$country = Country.find_or_create_by(name: "Spain")
 		 
 		fichero = File.open('./tasks/Vacunas20130726.csv', "r") 
 		 
 		fichero.each { |file|  
 			rowIn = file.split(';')
 			if rowIn[0] != '' && rowIn[0] != '-'
-				$calendar = Calendar.find_or_create_by_name(rowIn[0])
+				$calendar = Calendar.find_or_create_by(name: rowIn[0])
 				$calendar.country = $country
 				$calendar.save!
 			end  
