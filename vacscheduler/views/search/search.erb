@@ -1,7 +1,7 @@
 <div class='page-header'>
 	<h1>Vaccines Searcher</h1>
 </div>
-<form class="form-horizontal" method="get" action="/search/results" role="form">
+<form class="form-horizontal" method="get" action="/vacscheduler/search/results" role="form">
 	<div class="form-group">
 		<label class="col-sm-2 control-label" for="countryInput">Country:</label>
 		<div class="col-sm-10">
@@ -11,7 +11,7 @@
 	<div class="form-group">
 		<label class="col-sm-2 control-label" for="calendarInput">Calendar:</label>
 		<div class="col-sm-10">
-			<%= partial "search/calendar" %>
+			<%= partial "/search/calendar" %>
 		</div>
 	</div>	<div class="form-group">
 		<label class="col-sm-2 control-label" for="birthdayInput">Birthday:</label>
@@ -29,7 +29,7 @@
     $(document).ready(function() {
         $('#country_select').change(function() {
             $.ajax({
-                url: "/search/calendar",
+                url: "vacscheduler/search/calendar",
                 data: {
                     country : $('#country_select').val()
                 },

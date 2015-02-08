@@ -7,9 +7,9 @@ module VacScheduler
     enable :sessions
     
     get "/" do
-        render '/search/search'
+        render 'search/search'
     end
-
+    
     ##
     # Caching support.
     #

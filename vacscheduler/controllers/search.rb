@@ -1,4 +1,4 @@
-VacScheduler::App.controllers :search do
+VacScheduler::Vacscheduler.controllers :search do
   
   # get :index, :map => '/foo/bar' do
   #   session[:foo] = 'bar'
@@ -22,7 +22,7 @@ VacScheduler::App.controllers :search do
   get :index do
     country_id = 0
     @calendar = Calendar.where("country_id = ?", country_id)
-    render "search/search", :layout => App.layout_path("application")
+    render "search/search"
   end
 
   get :calendar do
@@ -31,7 +31,7 @@ VacScheduler::App.controllers :search do
         country_id = params["country"]
     end
     @calendar = Calendar.where("country_id = ?", country_id)
-    partial "search/calendar", :layout => App.layout_path("application")
+    partial "search/calendar"
   end
 
   get :results do
@@ -48,7 +48,7 @@ VacScheduler::App.controllers :search do
         .where('ages.months >= ?', months)
         .where(:calendar_id => calendar_id)
         .order('ages.months')
-    render "search/results", :layout => App.layout_path("application")
+    render "search/results"
   end
 
 end

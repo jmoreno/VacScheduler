@@ -8,6 +8,10 @@ module VacScheduler
     register Padrino::Helpers
 
     enable :sessions
+    
+    get "/" do
+        render 'index'
+    end
 
     ##
     # Caching support.
